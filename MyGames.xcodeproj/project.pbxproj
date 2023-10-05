@@ -38,7 +38,6 @@
 		E2A990C52ACEF0CB00B15AA2 = {
 			isa = PBXGroup;
 			children = (
-				E2A990E82ACEF48100B15AA2 /* Extension */,
 				E2A990D02ACEF0CB00B15AA2 /* MyGames */,
 				E2A990CF2ACEF0CB00B15AA2 /* Products */,
 			);
@@ -55,6 +54,7 @@
 		E2A990D02ACEF0CB00B15AA2 /* MyGames */ = {
 			isa = PBXGroup;
 			children = (
+				E2A990E82ACEF48100B15AA2 /* Extension */,
 				E2A990E52ACEF3E700B15AA2 /* Resource */,
 				E2A990E62ACEF40000B15AA2 /* Scenes */,
 				E2A990DF2ACEF0CC00B15AA2 /* Info.plist */,
