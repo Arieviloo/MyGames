@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupInitViewController()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,4 +50,5 @@ class HomeViewController: UIViewController {
     }
     
 }
+
 

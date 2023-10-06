@@ -29,7 +29,10 @@ class PlatformViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handlerAddPlatfomr))
         navigationItem.rightBarButtonItem?.tintColor = .white
+//        navigationItem.setHidesBackButton(true, animated: true)
     }
+    
+ 
     
     @objc private func handlerAddPlatfomr() {
         print(#function)
