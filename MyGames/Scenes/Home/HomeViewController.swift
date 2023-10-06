@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     
     private var searchController: UISearchController?
     private var tableView: HomeView?
-    private var platformView = PlatformViewController()
+    private var createGameView = CreateGameViewController()
     
     override func loadView() {
         tableView = HomeView()
@@ -21,8 +21,6 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupInitViewController()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,6 +29,7 @@ class HomeViewController: UIViewController {
         appearance.backgroundColor = UIColor.appPrimaryColor
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        setupInitViewController()
     }
     
     private func setupInitViewController() {
@@ -46,7 +45,7 @@ class HomeViewController: UIViewController {
     @objc func handlerAddGame() {
         print(#function)
 //        present(platformView, animated: true)
-        navigationController?.pushViewController(platformView, animated: false)
+        navigationController?.pushViewController(createGameView, animated: false)
     }
     
 }
