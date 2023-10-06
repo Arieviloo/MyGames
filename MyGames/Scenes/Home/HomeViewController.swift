@@ -39,7 +39,7 @@ class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handlerAddGame))
         navigationItem.rightBarButtonItem?.tintColor = .white
         navigationItem.searchController = searchController
-     
+        navigationItem.backButtonTitle = "Voltar"
     }
     
     @objc func handlerAddGame() {
