@@ -24,7 +24,7 @@ class PlatformViewController: UIViewController {
     }
     
     private func setupInitViewController() {
-        title = "Plataformas"
+        title = String(localizedKey: "titlePlatforms")
         view.backgroundColor = UIColor.appSecundaryColor
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handlerAddPlatfomr))

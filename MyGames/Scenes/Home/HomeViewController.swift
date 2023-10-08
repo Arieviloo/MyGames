@@ -33,13 +33,13 @@ class HomeViewController: UIViewController {
     }
     
     private func setupInitViewController() {
-        title = "Lista de Jogos"
+        title = String(localizedKey: "titleHome")
         view.backgroundColor = UIColor.appSecundaryColor
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handlerAddGame))
         navigationItem.rightBarButtonItem?.tintColor = .white
         navigationItem.searchController = searchController
-        navigationItem.backButtonTitle = "Voltar"
+        navigationItem.backButtonTitle = String(localizedKey: "textBack")
     }
     
     @objc func handlerAddGame() {
