@@ -18,7 +18,7 @@ class CreateGameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Novo jogo"
+        title =  String(localizedKey: "titleCreateGame")
         view.backgroundColor = UIColor.appSecundaryColor
         
     }
