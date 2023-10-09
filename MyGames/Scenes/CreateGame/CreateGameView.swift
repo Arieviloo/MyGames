@@ -7,7 +7,16 @@
 
 import UIKit
 
-class CreateGameVIew: UIView {
+protocol CreateGameViewProtocol : NSObject {
+    func tappedAddNewGame()
+}
+
+class CreateGameView: UIView {
+    
+    private weak var delegate: CreateGameViewProtocol?
+    public func delegate(delegate: CreateGameViewProtocol) {
+        self.delegate = delegate
+    }
     
     lazy var nameTextField: UITextField = {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -64,6 +73,7 @@ class CreateGameVIew: UIView {
         $0.clipsToBounds = true
         $0.layer.cornerRadius = 4
         $0.backgroundColor = UIColor.appPrimaryColor
+        $0.addTarget(self, action: #selector(tappedAddNewGame), for: .touchUpInside)
         return $0
     }(UIButton())
     
@@ -81,6 +91,14 @@ class CreateGameVIew: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func tappedAddNewGame() {
+        self.delegate?.tappedAddNewGame()
+    }
+    
+    public func protocolTextField(delegate: UITextFieldDelegate) {
+        nameTextField.delegate = delegate
     }
     
     private func setupSubView() {
