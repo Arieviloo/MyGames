@@ -9,10 +9,10 @@ import UIKit
 
 class CreateGameViewController: UIViewController {
     
-    private var createView: CreateGameVIew?
+    private var createView: CreateGameView?
     
     override func loadView() {
-        createView = CreateGameVIew()
+        createView = CreateGameView()
         view = createView
     }
 
@@ -21,10 +21,22 @@ class CreateGameViewController: UIViewController {
         title =  String(localizedKey: "titleCreateGame")
         view.backgroundColor = UIColor.appSecundaryColor
         
+        createView?.delegate(delegate: self)
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.prefersLargeTitles = false
       
+    }
+}
+
+extension CreateGameViewController: CreateGameViewProtocol {
+    func tappedAddNewGame() {
+        guard let date = createView?.datePicker.date else {
+            return
+        }
+        
+        print(date)
     }
 }
