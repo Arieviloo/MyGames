@@ -97,6 +97,10 @@ class CreateGameView: UIView {
         self.delegate?.tappedAddNewGame()
     }
     
+    public func protocolTextField(delegate: UITextFieldDelegate) {
+        nameTextField.delegate = delegate
+    }
+    
     private func setupSubView() {
         addSubview(nameTextField)
         addSubview(platformTextField)

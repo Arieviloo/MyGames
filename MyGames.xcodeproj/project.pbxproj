@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E249105B2AD423A500111F72 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E249105A2AD423A500111F72 /* UIViewController+Extension.swift */; };
 		E252AAFF2AD307300097CEDF /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E252AAFE2AD307300097CEDF /* String+Localizable.swift */; };
 		E252AB022AD307DE0097CEDF /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = E252AB012AD307DE0097CEDF /* Localizable.strings */; };
 		E266409F2AD056B5006286EB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E266409E2AD056B5006286EB /* MainViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E249105A2AD423A500111F72 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		E252AAFE2AD307300097CEDF /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
 		E252AB012AD307DE0097CEDF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E266409E2AD056B5006286EB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				E2A990E92ACEF49600B15AA2 /* UIColor + Extension.swift */,
 				E252AAFE2AD307300097CEDF /* String+Localizable.swift */,
+				E249105A2AD423A500111F72 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E249105B2AD423A500111F72 /* UIViewController+Extension.swift in Sources */,
 				E252AB022AD307DE0097CEDF /* Localizable.strings in Sources */,
 				E2A990EA2ACEF49600B15AA2 /* UIColor + Extension.swift in Sources */,
 				E252AAFF2AD307300097CEDF /* String+Localizable.swift in Sources */,

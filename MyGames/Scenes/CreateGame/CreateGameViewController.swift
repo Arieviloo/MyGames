@@ -22,7 +22,8 @@ class CreateGameViewController: UIViewController {
         view.backgroundColor = UIColor.appSecundaryColor
         
         createView?.delegate(delegate: self)
-        
+        createView?.protocolTextField(delegate: self)
+        dismissKeyBoard()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -38,5 +39,11 @@ extension CreateGameViewController: CreateGameViewProtocol {
         }
         
         print(date)
+    }
+}
+
+extension CreateGameViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
 }
