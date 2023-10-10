@@ -10,7 +10,7 @@ import UIKit
 class HomeView: UIView {
     lazy var listTableview: UITableView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.backgroundColor = .green
+//        $0.backgroundColor = .green
         return $0
     }(UITableView())
     

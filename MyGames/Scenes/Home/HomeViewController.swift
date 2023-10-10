@@ -18,28 +18,17 @@ class HomeViewController: UIViewController {
         searchController = UISearchController()
         view = tableView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setupAppearanceNavigation(UIColor.appPrimaryColor)
         setupNavigationController()
     }
     
     private func setupNavigationController() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor.appPrimaryColor
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        navigationController?.navigationBar.prefersLargeTitles = true
-
-        tabBarController?.tabBar.backgroundColor = UIColor.appSecundaryColor
-        tabBarController?.tabBar.tintColor = UIColor.black
-        
         title = String(localizedKey: "titleHome")
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handlerAddGame))
@@ -50,7 +39,7 @@ class HomeViewController: UIViewController {
     
     @objc func handlerAddGame() {
         print(#function)
-//        present(platformView, animated: true)
+        //        present(platformView, animated: true)
         navigationController?.pushViewController(createGameView, animated: false)
     }
     
