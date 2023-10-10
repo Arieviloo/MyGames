@@ -53,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E24AB5BA2AD5D0F10006C5B5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E2A990D12ACEF0CB00B15AA2 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		E252AB002AD307B90097CEDF /* LocalizableStrings */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +105,7 @@
 		E2A990D02ACEF0CB00B15AA2 /* MyGames */ = {
 			isa = PBXGroup;
 			children = (
+				E24AB5BA2AD5D0F10006C5B5 /* Application */,
 				E2A990E82ACEF48100B15AA2 /* Extension */,
 				E2A990E52ACEF3E700B15AA2 /* Resource */,
 				E2A990E62ACEF40000B15AA2 /* Scenes */,
@@ -109,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				E252AB002AD307B90097CEDF /* LocalizableStrings */,
-				E2A990D12ACEF0CB00B15AA2 /* AppDelegate.swift */,
 				E2A990DC2ACEF0CC00B15AA2 /* LaunchScreen.storyboard */,
 				E2A990DA2ACEF0CC00B15AA2 /* Assets.xcassets */,
 			);
