@@ -24,18 +24,24 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setupNavigationController()
+    }
+    
+    private func setupNavigationController() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = UIColor.appPrimaryColor
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        setupInitViewController()
-    }
-    
-    private func setupInitViewController() {
-        title = String(localizedKey: "titleHome")
-        view.backgroundColor = UIColor.appSecundaryColor
         navigationController?.navigationBar.prefersLargeTitles = true
+
+        tabBarController?.tabBar.backgroundColor = UIColor.appSecundaryColor
+        tabBarController?.tabBar.tintColor = UIColor.black
+        
+        title = String(localizedKey: "titleHome")
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handlerAddGame))
         navigationItem.rightBarButtonItem?.tintColor = .white
         navigationItem.searchController = searchController
