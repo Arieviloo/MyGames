@@ -68,6 +68,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         gameVC.dataGame("testeee")
         navigationController?.pushViewController(gameVC, animated: true)
     }
+	
+	
+	
     
 }
 
