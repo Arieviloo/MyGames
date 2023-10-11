@@ -8,9 +8,10 @@
 import UIKit
 
 class HomeView: UIView {
+    
     lazy var listTableview: UITableView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-//        $0.backgroundColor = .green
+        $0.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
         return $0
     }(UITableView())
     
@@ -22,6 +23,11 @@ class HomeView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func protocolsTableView(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+        listTableview.delegate = delegate
+        listTableview.dataSource = dataSource
     }
     
     private func setupSubView() {
@@ -36,5 +42,4 @@ class HomeView: UIView {
             listTableview.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
         ])
     }
-    
 }

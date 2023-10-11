@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E249105B2AD423A500111F72 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E249105A2AD423A500111F72 /* UIViewController+Extension.swift */; };
+		E24AB5BF2AD6BAFB0006C5B5 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24AB5BE2AD6BAFB0006C5B5 /* HomeTableViewCell.swift */; };
 		E252AAFF2AD307300097CEDF /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E252AAFE2AD307300097CEDF /* String+Localizable.swift */; };
 		E252AB022AD307DE0097CEDF /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = E252AB012AD307DE0097CEDF /* Localizable.strings */; };
 		E266409F2AD056B5006286EB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E266409E2AD056B5006286EB /* MainViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		E249105A2AD423A500111F72 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		E24AB5BE2AD6BAFB0006C5B5 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		E252AAFE2AD307300097CEDF /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
 		E252AB012AD307DE0097CEDF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E266409E2AD056B5006286EB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 				E2A990D12ACEF0CB00B15AA2 /* AppDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		E24AB5BD2AD6BAD10006C5B5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E24AB5BE2AD6BAFB0006C5B5 /* HomeTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		E252AB002AD307B90097CEDF /* LocalizableStrings */ = {
@@ -138,6 +148,7 @@
 		E2A990E72ACEF41400B15AA2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E24AB5BD2AD6BAD10006C5B5 /* Cell */,
 				E2A990D52ACEF0CB00B15AA2 /* HomeViewController.swift */,
 				E2A990EC2ACEF61C00B15AA2 /* HomeView.swift */,
 			);
@@ -235,6 +246,7 @@
 			files = (
 				E249105B2AD423A500111F72 /* UIViewController+Extension.swift in Sources */,
 				E252AB022AD307DE0097CEDF /* Localizable.strings in Sources */,
+				E24AB5BF2AD6BAFB0006C5B5 /* HomeTableViewCell.swift in Sources */,
 				E2A990EA2ACEF49600B15AA2 /* UIColor + Extension.swift in Sources */,
 				E252AAFF2AD307300097CEDF /* String+Localizable.swift in Sources */,
 				E2A990F32ACF36A800B15AA2 /* PlatformViewController.swift in Sources */,

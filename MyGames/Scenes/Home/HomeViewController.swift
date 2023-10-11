@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView?.protocolsTableView(delegate: self, dataSource: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +42,25 @@ class HomeViewController: UIViewController {
         print(#function)
         //        present(platformView, animated: true)
         navigationController?.pushViewController(createGameView, animated: false)
+    }
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as? HomeTableViewCell
+        
+        cell?.nameLabel.text = "zeldinha"
+        cell?.platformLabel.text = "NaoIntendo"
+        
+        return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        150
     }
     
 }
