@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     private var searchController: UISearchController?
     private var tableView: HomeView?
     private var createGameView = CreateGameViewController()
+    private let gameVC = GameViewController()
     
     override func loadView() {
         tableView = HomeView()
@@ -40,7 +41,6 @@ class HomeViewController: UIViewController {
     
     @objc func handlerAddGame() {
         print(#function)
-        //        present(platformView, animated: true)
         navigationController?.pushViewController(createGameView, animated: false)
     }
 }
@@ -65,6 +65,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        gameVC.dataGame("testeee")
+        navigationController?.pushViewController(gameVC, animated: true)
     }
     
 }

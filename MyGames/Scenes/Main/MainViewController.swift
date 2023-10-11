@@ -23,7 +23,7 @@ class MainViewController: UITabBarController {
         let homeNC = UINavigationController(rootViewController: homeVC)
         let platformNC = UINavigationController(rootViewController: platformVC)
         
-        homeNC.tabBarItem = UITabBarItem(title: String(localizedKey: "titleHome"), image: UIImage(systemName: "list.dash"), tag: 1)
+        homeNC.tabBarItem = UITabBarItem(title: String(localizedKey: "titleHome"), image: UIImage(systemName: "gamecontroller"), tag: 1)
         platformNC.tabBarItem = UITabBarItem(title: String(localizedKey: "titlePlatforms"), image: UIImage(systemName: "arcade.stick.console"), tag: 2)
         
         let tabBarList = [homeNC, platformNC]
