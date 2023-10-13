@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E223C53D2AD6FCCD005A0D2C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E223C53C2AD6FCCD005A0D2C /* GameViewController.swift */; };
 		E223C53F2AD6FCD4005A0D2C /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E223C53E2AD6FCD4005A0D2C /* GameView.swift */; };
+		E23F2FD62AD96A1D0021EFD9 /* MyGames.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E23F2FD42AD96A1D0021EFD9 /* MyGames.xcdatamodeld */; };
 		E249105B2AD423A500111F72 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E249105A2AD423A500111F72 /* UIViewController+Extension.swift */; };
 		E24AB5BF2AD6BAFB0006C5B5 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24AB5BE2AD6BAFB0006C5B5 /* HomeTableViewCell.swift */; };
 		E252AAFF2AD307300097CEDF /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E252AAFE2AD307300097CEDF /* String+Localizable.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		E223C53C2AD6FCCD005A0D2C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		E223C53E2AD6FCD4005A0D2C /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		E23F2FD52AD96A1D0021EFD9 /* MyGames.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyGames.xcdatamodel; sourceTree = "<group>"; };
 		E249105A2AD423A500111F72 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		E24AB5BE2AD6BAFB0006C5B5 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		E252AAFE2AD307300097CEDF /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				E2A990E52ACEF3E700B15AA2 /* Resource */,
 				E2A990E62ACEF40000B15AA2 /* Scenes */,
 				E2A990DF2ACEF0CC00B15AA2 /* Info.plist */,
+				E23F2FD42AD96A1D0021EFD9 /* MyGames.xcdatamodeld */,
 			);
 			path = MyGames;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				E2A990D22ACEF0CB00B15AA2 /* AppDelegate.swift in Sources */,
 				E26640A22AD078B6006286EB /* CreateGameViewController.swift in Sources */,
 				E266409F2AD056B5006286EB /* MainViewController.swift in Sources */,
+				E23F2FD62AD96A1D0021EFD9 /* MyGames.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +499,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E23F2FD42AD96A1D0021EFD9 /* MyGames.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E23F2FD52AD96A1D0021EFD9 /* MyGames.xcdatamodel */,
+			);
+			currentVersion = E23F2FD52AD96A1D0021EFD9 /* MyGames.xcdatamodel */;
+			path = MyGames.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E2A990C62ACEF0CB00B15AA2 /* Project object */;
 }
