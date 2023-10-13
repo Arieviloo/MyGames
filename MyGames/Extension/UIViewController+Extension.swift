@@ -6,9 +6,16 @@
 //
 import Foundation
 import UIKit
+import CoreData
 
 
 extension UIViewController {
+	
+	var context: NSManagedObjectContext {
+		let appDelegate = UIApplication.shared.delegate as! AppDelegate
+		return appDelegate.persistentContainer.viewContext
+	}
+	
     func dismissKeyBoard() {
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false

@@ -9,7 +9,6 @@ import UIKit
 
 class PlatformViewController: UIViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAppearanceNavigation(UIColor.appThirdColor)
@@ -21,10 +20,15 @@ class PlatformViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handlerAddPlatfomr))
     }
     
- 
-    
     @objc private func handlerAddPlatfomr() {
-        print(#function)
+		let alert  = UIAlertController(title: "Plataforma", message: "Nome da nova plataforma", preferredStyle: .alert)
+		alert.addTextField(configurationHandler: nil)
+		alert.addAction(UIAlertAction(title: "Criar", style: .cancel, handler: { [weak self] _ in
+			guard let field = alert.textFields?.first, let text = field.text, !text.isEmpty else { return }
+			print(text)
+		}))
+		
+		present(alert, animated: true)
     }
     
 }
