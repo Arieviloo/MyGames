@@ -10,6 +10,7 @@ import UIKit
 class CreateGameViewController: UIViewController {
     
     private var createView: CreateGameView?
+	public var game: Game?
     
     override func loadView() {
         createView = CreateGameView()
@@ -34,11 +35,19 @@ class CreateGameViewController: UIViewController {
 
 extension CreateGameViewController: CreateGameViewProtocol {
     func tappedAddNewGame() {
-        guard let date = createView?.datePicker.date else {
-            return
-        }
+		if game == nil {
+			game = Game(context: context)
+		}
+		game?.name = createView?.nameTextField.text
+		game?.releaseDate = createView?.datePicker.date
+		
+//		do {
+//			try context.save()
+//		} catch {
+//			//Error
+//		}
         
-        print(date)
+        print(game)
     }
 }
 
