@@ -41,13 +41,13 @@ extension CreateGameViewController: CreateGameViewProtocol {
 		game?.name = createView?.nameTextField.text
 		game?.releaseDate = createView?.datePicker.date
 		
-//		do {
-//			try context.save()
-//		} catch {
-//			//Error
-//		}
+		do {
+			try context.save()
+		} catch {
+			print("Error", #function , "-> \(error.localizedDescription)")
+		}
         
-        print(game)
+		navigationController?.popViewController(animated: true)
     }
 }
 
