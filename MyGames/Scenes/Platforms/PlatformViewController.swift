@@ -21,14 +21,29 @@ class PlatformViewController: UIViewController {
     }
     
     @objc private func handlerAddPlatfomr() {
-		let alert  = UIAlertController(title: "Plataforma", message: "Nome da nova plataforma", preferredStyle: .alert)
-		alert.addTextField(configurationHandler: nil)
-		alert.addAction(UIAlertAction(title: "Criar", style: .cancel, handler: { [weak self] _ in
-			guard let field = alert.textFields?.first, let text = field.text, !text.isEmpty else { return }
+		showAlert(with: nil)
+    }
+	
+	private func showAlert(with console: Platform?) {
+		let title = console == nil ? "Adicionar" : "Editar"
+		let alert  = UIAlertController(title: "\(title) Plataforma", message: nil, preferredStyle: .alert)
+//		alert.addTextField(configurationHandler: nil)
+		alert.addTextField{ (textfield) in
+			textfield.placeholder = "Nome da plataforma"
+			if let name = console?.name {
+				textfield.text = name
+			}
+		}
+		alert.addAction(UIAlertAction(title: title, style: .default, handler: { (action) in
+//			let console = console ?? Platform(context: self.context)
+//			console.name = alert.textFields?.first?.text
+			guard let text = alert.textFields?.first?.text else { return }
+			
 			print(text)
 		}))
+		alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
 		
 		present(alert, animated: true)
-    }
+	}
     
 }
