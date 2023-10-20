@@ -89,6 +89,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 		gameVC.dataGame("testeee")
 		navigationController?.pushViewController(gameVC, animated: true)
 	}
+	
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			guard let game = fetchedResultController?.fetchedObjects?[indexPath.row] else { return }
+			context.delete(game)
+			
+		}
+	}
+	
 }
 
 extension HomeViewController: NSFetchedResultsControllerDelegate {
@@ -96,6 +105,9 @@ extension HomeViewController: NSFetchedResultsControllerDelegate {
 		
 		switch type {
 		case .delete:
+			if let indexPath = indexPath {
+				self.homeView?.listTableview.deleteRows(at: [indexPath], with: .fade)
+			}
 			break
 		default:
 			self.homeView?.listTableview.reloadData()
